@@ -1,19 +1,17 @@
 {% assign closebar = true %}
 
 <div class="wrapper">
-<div class="slider">
-	<div class="slide-track">
-		<div class="slide">
-			<div class="announcement-bartext">{{ section.settings.bartext1 }}</div>
-		</div>
-		<div class="slide">
-			<div class="announcement-bartext">{{ section.settings.bartext2 }}</div>
-		</div>
-		<div class="slide">
-			<div class="announcement-bartext">{{ section.settings.bartext3 }}</div>
-		</div>
+<div class="carousel">
+
+			<div class="carousel__item">{{ section.settings.bartext1 }}</div>
+
+	
+			<div class="carousel__item">{{ section.settings.bartext2 }}</div>
+
+	
+			<div class="carousel__item">{{ section.settings.bartext3 }}</div>
+
 	</div>
-</div>
 </div>
 
 <header class="site-header" role="banner" data-section-id="{{ section.id }}" data-section-type="header-section">
