@@ -1,13 +1,13 @@
-.bar{
+.announcement-bar{
   	display: flex;
   	justify-content: center;
 }
-.bartext{
+.announcement-bartext{
 	font-size:large;
   	margin-left: 40%;
   	padding: 10px;
 }
-.icon{
+.announcement-close-icon{
 	margin-left: auto;
   	padding: 10px;
   	cursor: pointer;
