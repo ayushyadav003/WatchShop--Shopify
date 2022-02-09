@@ -1,13 +1,17 @@
 {% assign closebar = true %}
 
+{% if closebar == true %}
+
   <div class="announcement-container">
     <div class="announcement-bar">
       <div class="slide">{{ section.settings.bartext1 }}</div>
       <div class="slide">{{ section.settings.bartext2 }}</div>
       <div class="slide">{{ section.settings.bartext3 }}</div>
     </div>
-    <div class="cross-announcement-bar"><h1>&#215</h1></div>
+    <div class="cross-announcement-bar" onclick="closebar=false; console.log(closebar)"><h1>&#215</h1></div>
   </div>
+
+{% endif %}
 
 <header class="site-header" role="banner" data-section-id="{{ section.id }}" data-section-type="header-section">
   <div class="wrapper">
