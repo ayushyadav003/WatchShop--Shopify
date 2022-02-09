@@ -1,5 +1,3 @@
-var closebar = function(){
-	ducument.getElementById("x").style.display="none";
+var x(){
+	alert("hello");	
 }
-
-console.log("heloooooooo")
