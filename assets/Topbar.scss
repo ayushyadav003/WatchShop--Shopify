@@ -13,7 +13,7 @@
     transform: translateX(0);
     opacity: 1;
   }
-  35% {
+  40% {
     transform: translateX(0);
     opacity: 1;
   }
@@ -38,7 +38,7 @@
   position: absolute;
   padding: 5px 0 0 0 ;
   top: 0;
-  left: calc(60% - 100px);
+  left: calc(60% - 160px);
   opacity: 0;
   animation: display 4s infinite;
 }
