@@ -1,13 +1,12 @@
 
 .announcement-bar{
   overflow:hidden;
-	display: flex;
+  display: flex;
   padding: 10px;
   margin:0;
 }
 
 .slide{
-  width:300px;
   display:table;
   animation:imageSlide 7s infinite;
   position:relative;
