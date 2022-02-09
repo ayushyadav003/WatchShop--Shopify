@@ -1,5 +1,5 @@
 .announcement-bar{
-  	display: flex;
+  	display: none;
   	justify-content: center;
 }
 .announcement-bartext{
