@@ -1,4 +1,9 @@
 
+.announcement-container{
+	display: flex;
+}
+
+
 @keyframes display {
   0% {
     transform: translateX(200px);
