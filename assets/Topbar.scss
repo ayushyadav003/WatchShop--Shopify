@@ -1,12 +1,35 @@
-.announcement-bar{
-	display : flex;
-  	justify-content: center;
-  	padding: 10px;
-  	font-size: medium;
-   	animation: mymove 5s infinite;
-	}
 
-    @keyframes mymove {
-      from {top: 200px;}
-      to {top: 0px;}
-    }
+.announcement-bar{
+  overflow:hidden;
+  height:150px;
+  padding:0;
+  margin:0;
+}
+
+.slide{
+  width:300px;
+  display:table;
+  animation:imageSlide 7s infinite;
+  position:relative;
+  padding:0;
+  margin:0;
+}
+
+
+@keyframes imageSlide {
+	0% {
+		top:0%
+	}
+	25% {
+		top:0%
+	}
+	50% {
+		top:-100%
+	}
+	75% {
+		top:-100%
+	}
+	100% {
+		top:0%
+	}
+}
