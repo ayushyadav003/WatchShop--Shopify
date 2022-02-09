@@ -1,0 +1,8 @@
+.bar{
+	background-color:blue;
+  	display: flex;
+  	justify-content: center;
+}
+.bartext{
+	font-size:large;
+}
