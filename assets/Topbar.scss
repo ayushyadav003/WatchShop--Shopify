@@ -1,63 +1,119 @@
-.a-slider {
-	align-items: center;
-	background: #E3E3E3;
-	display: flex;
-	height: 100vh;
-	justify-content: center;
+$animation-timing: 27s;
+$carousel-items: 9;
+$animation-delay-fraction: $animation-timing / $carousel-items;
+$animation-steps-fraction: 100 / $carousel-items;
+$slide-change-timing: 3; // percentage of total animation cycle
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-@mixin white-gradient {
-	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+.wrapper {
+  background: linear-gradient(60deg, #420285, #08BDBD);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-$animationSpeed: 40s;
-
-// Animation
-@keyframes scroll {
-	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-250px * 7))}
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
+.carousel__item {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  padding: 0 12px;
+  opacity: 0;
+  filter: drop-shadow(0 2px 2px #555);
+  will-change: transform, opacity;
+  animation: carousel-animate-vertical $animation-timing linear infinite;
+}
 
-// Styling
-.slider {
-	background: white;
-	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
-	height: 100px;
-	margin: auto;
-	overflow:hidden;
-	position: relative;
-	width: 960px;
-	
-	&::before,
-	&::after {
-		@include white-gradient;
-		content: "";
-		height: 100px;
-		position: absolute;
-		width: 200px;
-		z-index: 2;
-	}
-	
-	&::after {
-		right: 0;
-		top: 0;
-		transform: rotateZ(180deg);
-	}
+@for $i from 1 through ($carousel-items - 1) { 
+  .carousel__item:nth-child(#{$i}) {
+    animation-delay: calc(#{$animation-delay-fraction} * #{$i - 2});
+  }
+}
 
-	&::before {
-		left: 0;
-		top: 0;
-	}
-	
-	.slide-track {
-		animation: scroll $animationSpeed linear infinite;
-		display: flex;
-		width: calc(250px * 14);
-	}
-	
-	.slide {
-		height: 100px;
-		width: 250px;
-	}
+.carousel__item:last-child {
+  animation-delay: calc(-#{$animation-delay-fraction} * 2);
+}
+
+// example without negative delays
+// @for $i from 1 through ($carousel-items) { 
+//   .carousel__item:nth-child(#{$i}) {
+//     animation-delay: calc(#{$animation-delay-fraction} * #{$i});
+//   }
+// }
+
+.carousel__item-head {
+  border-radius: 50%;
+  background-color: #d7f7fc;
+  width: 90px;
+  height: 90px;
+  padding: 14px;
+  position: relative;
+  margin-right: -45px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+}
+
+.carousel__item-body {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 16px 20px 16px 70px;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+@keyframes carousel-animate-vertical {
+  0% {
+    transform: translateY(100%) scale(0.5);
+    opacity: 0;
+    visibility: hidden;
+  }
+  #{$slide-change-timing}%,
+  #{$animation-steps-fraction}% {
+    transform: translateY(100%) scale(0.7);
+    opacity: .4;
+    visibility: visible;
+  }
+  #{$animation-steps-fraction + $slide-change-timing}%,
+  #{$animation-steps-fraction * 2}% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+  #{($animation-steps-fraction * 2) + $slide-change-timing}%,
+  #{$animation-steps-fraction * 3}% {
+    transform: translateY(-100%) scale(0.7);
+    opacity: .4;
+    visibility: visible;
+  }
+  #{($animation-steps-fraction * 3) + $slide-change-timing}% {
+    transform: translateY(-100%) scale(0.5);
+    opacity: 0;
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(-100%) scale(0.5);
+    opacity: 0;
+    visibility: hidden;
+  }
 }
