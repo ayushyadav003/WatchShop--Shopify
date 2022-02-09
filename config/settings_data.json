@@ -52,8 +52,8 @@
           "logo_max_width": "305",
           "topbar": false,
           "bartext1": "Get 10% Off on your first order",
-          "bartext2": "**End of Season sale is on**",
-          "bartext3": "Get upto 50% Off on Deal of the Day",
+          "bartext2": "",
+          "bartext3": "",
           "show_announcement": false,
           "announcement_text": "Republic day special sale is on!!!!",
           "announcement_link": ""
