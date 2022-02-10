@@ -1,3 +1,3 @@
-function dismiss(){
-	 document.getElementById('dismiss').parentNode.style.display='none';
+function dismiss(el){
+	el.parentNode.style.display='none';
 }
