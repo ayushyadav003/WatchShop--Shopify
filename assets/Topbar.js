@@ -4,7 +4,7 @@ function dismiss(val){
 }
 
 function Pdismiss(val){
-  if(getCookie('preference') != null){
+if (document.cookie.length > 0) {
   	val.parentNode.style.display='none';	
   }
 }
