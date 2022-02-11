@@ -3,4 +3,3 @@ function dismiss(val){
   	document.cookie = "preference= 1;";
 }
  
-console.log(getCookie('preference'));
