@@ -3,3 +3,8 @@ function dismiss(val){
   	document.cookie = "preference= 1;";
 }
  
+function checkCookie() {
+  let user = getCookie("preference");
+  if (user != "") {
+    alert("Welcome again " + user);
+  }
