@@ -3,5 +3,5 @@ function dismiss(val){
   Cookies.set("preference", "true", {expires : 2");
 }
               
-              console.log("hello")
+          
  
