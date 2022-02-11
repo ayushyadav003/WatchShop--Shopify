@@ -3,9 +3,4 @@ function dismiss(val){
   	document.cookie = "preference= 1; expires=sun; path=/";
 }
 
-function Pdismiss(val){
-if (document.cookie.length > 0) {
-  	val.parentNode.style.display='none';	
-  }
-}
- 
+
