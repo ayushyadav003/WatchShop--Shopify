@@ -9,3 +9,4 @@ const cookieValue = document.cookie
   .find(row => row.startsWith('preference='))
   .split('=')[1];
  
+const name = 'Ayush';
