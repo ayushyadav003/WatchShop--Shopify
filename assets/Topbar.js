@@ -1,4 +1,4 @@
 function dismiss(el){
 	el.parentNode.style.display='none';
-  	document.cookie = "preference= 'null'";
+  	document.cookie = "preference=1ss ";
 }
