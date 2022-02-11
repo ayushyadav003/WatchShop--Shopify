@@ -50,7 +50,6 @@
         "settings": {
           "menu": "main-menu",
           "logo_max_width": "305",
-          "show_topbar": true,
           "bartext1": "Get 10% Off on your first order",
           "bartext2": "",
           "bartext3": "",
@@ -205,15 +204,7 @@
       "collection-row-2",
       "collection-row-3",
       "1643108537ba704036"
-    ],
-    "blocks": {
-      "5731609403698768836": {
-        "type": "shopify:\/\/apps\/gdpr-cookie-compiler\/blocks\/app-embed\/6955b779-786b-4dca-989a-3a5e81cdb8a7",
-        "disabled": false,
-        "settings": {
-        }
-      }
-    }
+    ]
   },
   "presets": {
     "Blue": {
