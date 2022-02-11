@@ -1,5 +1,5 @@
 {% if section.settings.show_topbar %}
-	{% if cookieValue != 0 %}
+	
       <div class="announcement-container">
         <div class="announcement-bar">
           <div class="slide">{{ section.settings.bartext1 }}</div>
@@ -8,11 +8,13 @@
         </div>
        <div id='dismiss' class="cross-announcement-bar" onclick="dismiss(this)">&#215</div>
       </div>
-	{% endif %}
+	
 {% endif %}
 
 
-
+{% if cookieValue != 0 %}
+<div>hello</div>
+{% endif %}
 
 
 <header class="site-header" role="banner" data-section-id="{{ section.id }}" data-section-type="header-section">
