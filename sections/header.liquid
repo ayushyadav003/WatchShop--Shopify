@@ -1,5 +1,5 @@
 {% if section.settings.show_topbar %}
-	{% if section.setting.cookie != 'none' %}
+	{% if "getCookie('preference') == null)" %}
       <div class="announcement-container">
         <div class="announcement-bar">
           <div class="slide">{{ section.settings.bartext1 }}</div>
