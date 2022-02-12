@@ -4,7 +4,7 @@ function dismiss(val){
   
 }
 
-const allcookie = document.cookie.split(';').map(cookie => cookie.split('='))
+let allcookie = document.cookie.split(';').map(cookie => cookie.split('='))
 			.reduce((accumulator, [key, value]) =>({...accumulator,
              [key.trim()]:decodeURIComponent(value) }), {});
 
