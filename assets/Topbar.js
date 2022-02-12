@@ -8,6 +8,6 @@ let allcookie = document.cookie.split(';').map(cookie => cookie.split('='))
 			.reduce((accumulator, [key, value]) =>({...accumulator,
              [key.trim()]:decodeURIComponent(value) }), {});
 
-if(allcookie.preference == 1){
-	document.getElementsByClassName("announcement-container")[0].style.display="none";
+if(allcookie.preference != 1){
+	document.getElementsByClassName("announcement-container")[0].style.display="block";
 }
