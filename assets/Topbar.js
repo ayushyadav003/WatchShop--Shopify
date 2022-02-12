@@ -4,9 +4,4 @@ function dismiss(val){
   
 }
 
-const cookieValue = document.cookie
-  .split('; ')
-  .find(row => row.startsWith('preference='))
-  .split('=')[1];
  
-const name = 1;
