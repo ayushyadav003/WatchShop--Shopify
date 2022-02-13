@@ -50,9 +50,7 @@
         "settings": {
           "menu": "main-menu",
           "logo_max_width": "305",
-          "bartext1": "Get 10% Off on your first order",
-          "bartext2": "",
-          "bartext3": "",
+          "show_topbar": true,
           "show_announcement": false,
           "announcement_text": "Republic day special sale is on!!!!",
           "announcement_link": ""
@@ -204,7 +202,21 @@
       "collection-row-2",
       "collection-row-3",
       "1643108537ba704036"
-    ]
+    ],
+    "blocks": {
+      "5731609403698768836": {
+        "type": "shopify:\/\/apps\/gdpr-cookie-compiler\/blocks\/app-embed\/6955b779-786b-4dca-989a-3a5e81cdb8a7",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "13129208525377196889": {
+        "type": "shopify:\/\/apps\/multi-country-pricing\/blocks\/mlveda-mcp\/a55f20a0-67fc-44fb-8f37-8dfe18bd61a2",
+        "disabled": true,
+        "settings": {
+        }
+      }
+    }
   },
   "presets": {
     "Blue": {
