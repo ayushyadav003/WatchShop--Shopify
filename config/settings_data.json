@@ -50,7 +50,6 @@
         "settings": {
           "menu": "main-menu",
           "logo_max_width": "305",
-          "show_topbar": true,
           "show_announcement": false,
           "announcement_text": "Republic day special sale is on!!!!",
           "announcement_link": ""
@@ -193,6 +192,23 @@
           "rows": 1,
           "product_show_saved_amount": true,
           "product_show_compare_at_price": false
+        }
+      },
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "blocks": {
+          "80af585a-f00a-4a82-9d8e-ecb0ccbff01a": {
+            "type": "Text",
+            "settings": {
+              "announcement-text": "Welcome to our store"
+            }
+          }
+        },
+        "block_order": [
+          "80af585a-f00a-4a82-9d8e-ecb0ccbff01a"
+        ],
+        "settings": {
+          "show_topbar": true
         }
       }
     },
