@@ -1,13 +1,26 @@
+
+{% if section.settings.show_topbar %}
+      <div class="announcement-container">
+        <div class="announcement-bar">
+          <div class="slide">{{ section.settings.bartext1 }}</div>
+          <div class="slide">{{ section.settings.bartext2 }}</div>
+          <div class="slide">{{ section.settings.bartext3 }}</div>
+        </div>
+       <div id='dismiss' class="cross-announcement-bar" onclick="dismiss(this)">&#215</div>
+      </div>
+{% endif %}
+
+
 {% schema %}
 {
   "name": "Announcement",
   "tag": "section",
-  "class": "showbar",
+  "class": "announcement-container",
   "max_blocks": 5,
   "settings": [
     {
       "type": "text",
-      "id": "showbar",
+      "id": "announcement-text",
       "label": "Announcement bar"
     }
   ],
