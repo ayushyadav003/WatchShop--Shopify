@@ -28,6 +28,10 @@
   display: block;
 }
 
+.cross-announcement-bar{
+	font-size:large;
+}
+
 @keyframes rotate {
  10%, 15%, 100% {
             transform: translateY(0);
