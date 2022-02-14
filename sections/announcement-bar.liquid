@@ -1,5 +1,6 @@
 
 {% if section.settings.show_topbar %}
+	{
       <div class="announcement-container">
         <div class="announcement-bar" {{ block.shopify_attributes }}>
           	<div class="slide">{{ block.settings.announcement_text }}</div>
@@ -8,15 +9,13 @@
       </div>
 {% endif %}
 
-  <div class="announcement-container">
-    Hello
-  </div>
+
 
 
 {% schema %}
 {
   "name": "Announcement",
-  "class": "announcement-container",
+  "class": "announcement-topbar",
   "max_blocks": 5,
   "settings": [  
 	{
