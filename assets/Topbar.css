@@ -23,7 +23,7 @@
   animation: rotate 8s ease-in-out infinite;
 }
 .announcement-container .announcement-bar .slide {
-  display: grid;
+  display: flex;
 }
 
 .cross-announcement-bar{
