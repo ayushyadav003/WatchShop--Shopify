@@ -200,19 +200,45 @@
           "80af585a-f00a-4a82-9d8e-ecb0ccbff01a": {
             "type": "Text",
             "settings": {
-              "announcement_text": "Welcome to our store"
+              "announcement_text": "Welcome to our store",
+              "ammouncement_link": ""
             }
           },
           "ecb4e688-68c5-4c78-8319-fa8932eafe22": {
             "type": "Text",
             "settings": {
-              "announcement_text": "Valentine's day special upto 50% off"
+              "announcement_text": "Valentine's day special upto 50% off",
+              "ammouncement_link": ""
+            }
+          },
+          "854a0188-a802-4bea-b877-eebc50c454b0": {
+            "type": "Text",
+            "settings": {
+              "announcement_text": "Welcome to our store",
+              "ammouncement_link": ""
+            }
+          },
+          "df84085e-e1d4-40a4-9d49-5843b8e303e3": {
+            "type": "Text",
+            "settings": {
+              "announcement_text": "Welcome to our store",
+              "ammouncement_link": ""
+            }
+          },
+          "7bf10f94-efda-413d-8db3-b73fe8f5781c": {
+            "type": "Text",
+            "settings": {
+              "announcement_text": "Welcome to our store",
+              "ammouncement_link": ""
             }
           }
         },
         "block_order": [
           "80af585a-f00a-4a82-9d8e-ecb0ccbff01a",
-          "ecb4e688-68c5-4c78-8319-fa8932eafe22"
+          "ecb4e688-68c5-4c78-8319-fa8932eafe22",
+          "854a0188-a802-4bea-b877-eebc50c454b0",
+          "df84085e-e1d4-40a4-9d49-5843b8e303e3",
+          "7bf10f94-efda-413d-8db3-b73fe8f5781c"
         ],
         "settings": {
           "show_topbar": true
