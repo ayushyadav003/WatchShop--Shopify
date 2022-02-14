@@ -29,7 +29,7 @@
 }
 
 .cross-announcement-bar{
-	font-size:large;
+	font-size:;
 }
 
 @keyframes rotate {
@@ -49,3 +49,4 @@
             transform: translateY(-180px);
   }
 }
+px
