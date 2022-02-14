@@ -39,9 +39,9 @@
   position: absolute;
   padding: 5px 0 0 0 ;
   top: 0;
-  left: calc(55% - 190px);
+/*   left: calc(55% - 190px);
   opacity: 0;
-  animation: display 3s infinite;
+  animation: display 3s infinite; */
   cursor: pointer;
 }
 
