@@ -454,7 +454,26 @@
         "zh-CN": "可选",
         "zh-TW": "(選填)"
       }
-    }
-  ]
+    },{
+          "type": "checkbox",
+          "id": "show_topbar",
+          "label": "Show bar",
+          "default": true
+      }
+],
+  "blocks": [
+    {
+      "name": "Announcement",
+      "type": "Text",
+      "settings": [
+          {
+            "type": "text",
+            "id": "announcement_text",
+            "default": "Welcome to our store",
+            "label": "Text"
+          }
+        ]
+      }
+	]
 }
 {% endschema %}
