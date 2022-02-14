@@ -1,11 +1,13 @@
 
 {% if section.settings.show_topbar %}
+	{% for block in section.blocks %}
       <div class="announcement-container">
         <div class="announcement-bar">
-          <div class="slide"><p>{{ section.block.settings.announcement_text }}</p></div>
+          <div class="slide"><p>{{ block.settings.announcement_text }}</p></div>
         </div>
        <div id='dismiss' class="cross-announcement-bar" onclick="dismiss(this)">&#215</div>
       </div>
+	{% endfor %}
 {% endif %}
 
 
