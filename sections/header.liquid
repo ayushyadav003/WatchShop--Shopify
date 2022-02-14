@@ -1,11 +1,3 @@
-{% if section.settings.show_topbar %}
-      <div class="announcement-container">
-        <div class="announcement-bar">
-          	<div class="slide">{{ section.settings.announcement_text }}</div>
-        </div>
-       <div id='dismiss' class="cross-announcement-bar" onclick="dismiss(this)">&#215</div>
-      </div>
-{% endif %}
 
 <header class="site-header" role="banner" data-section-id="{{ section.id }}" data-section-type="header-section">
   <div class="wrapper">
@@ -454,26 +446,7 @@
         "zh-CN": "可选",
         "zh-TW": "(選填)"
       }
-    },{
-          "type": "checkbox",
-          "id": "show_topbar",
-          "label": "Show bar",
-          "default": true
-      }
-],
-  "blocks": [
-    {
-      "name": "Announcement",
-      "type": "Text",
-      "settings": [
-          {
-            "type": "text",
-            "id": "announcement_text",
-            "default": "Welcome to our store",
-            "label": "Text"
-          }
-        ]
-      }
-	]
+    }
+  ]
 }
 {% endschema %}
