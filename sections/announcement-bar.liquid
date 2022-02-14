@@ -1,8 +1,8 @@
 
 {% if section.settings.show_topbar %}
 	{% for block in section.blocks %}
-      <div class="announcement-container">
-        <div class="announcement-bar">
+      <div class="announcement-container" {{ block.shopify_attributes }}>
+        <div class="announcement-bar" {{ block.shopify_attributes }}>
           <div class="slide" {{ block.shopify_attributes }}><p>{{ block.settings.announcement_text }}</p></div>
         </div>
        <div id='dismiss' class="cross-announcement-bar" onclick="dismiss(this)">&#215</div>
