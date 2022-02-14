@@ -19,6 +19,10 @@
   height: 45px;
   overflow: hidden;
 }
+.announcement-bar .announcement-bar .announcement-innerbar {
+  position: relative;
+  animation: rotate 8s ease-in-out infinite;
+}
 .slide {
   position: absolute;
   padding: 5px 0 0 0 ;
