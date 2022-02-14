@@ -1,6 +1,6 @@
 
 .announcement-container{
-	display: flex;
+	display: none;
 }
 
 
@@ -36,7 +36,6 @@
 }
 
 .slide {
-  color:black;
   position: absolute;
   padding: 5px 0 0 0 ;
   top: 0;
