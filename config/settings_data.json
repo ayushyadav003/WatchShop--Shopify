@@ -200,12 +200,19 @@
           "80af585a-f00a-4a82-9d8e-ecb0ccbff01a": {
             "type": "Text",
             "settings": {
-              "announcement-text": "Welcome to our store"
+              "announcement_text": "Welcome to our store"
+            }
+          },
+          "ecb4e688-68c5-4c78-8319-fa8932eafe22": {
+            "type": "Text",
+            "settings": {
+              "announcement_text": "Valentine's day special upto 50% off"
             }
           }
         },
         "block_order": [
-          "80af585a-f00a-4a82-9d8e-ecb0ccbff01a"
+          "80af585a-f00a-4a82-9d8e-ecb0ccbff01a",
+          "ecb4e688-68c5-4c78-8319-fa8932eafe22"
         ],
         "settings": {
           "show_topbar": true
