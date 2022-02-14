@@ -28,7 +28,7 @@
 }
 
 .announcement-bar {
-  display: flex;
+  display: grid;
   position: relative;
   width: 100vw;
   padding: 20px 0 20px 0;
