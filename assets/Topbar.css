@@ -17,7 +17,7 @@
   padding: 20px 0 20px 0;
   font-size: large;
 } */
-.announcement-bar .announcement-bar {
+.announcement-bar {
   position: absolute;
   top: 0;
   left: 54%;
@@ -25,7 +25,7 @@
   height: 45px;
   overflow: hidden;
 }
-.announcement-bar .announcement-bar .announcement-innerbar {
+.announcement-innerbar {
   position: relative;
   animation: rotate 8s ease-in-out infinite;
 }
@@ -45,7 +45,7 @@
   	font-size: 1.5rem;
 }
 
-.announcement-bar .announcement-bar .slide {
+.slide {
   display: block;
 }
 
