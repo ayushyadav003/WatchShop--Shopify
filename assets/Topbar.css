@@ -30,6 +30,8 @@
 
 .cross-announcement-bar{
 	font-size: 30px;
+  	cursor: pointer;
+  	margin: 0 0 0 10px;
 }
 
 @keyframes rotate {
