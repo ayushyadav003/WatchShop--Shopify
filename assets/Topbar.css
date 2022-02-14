@@ -29,11 +29,6 @@
 }
 
 .announcement-bar {
-  -webkit-transform:rotate(90deg);
-           -moz-transform:rotate(90deg);
-             -o-transform:rotate(90deg);
-                transform:rotate(90deg);
-
   position: relative;
   width: 100vw;
   padding: 20px 0 20px 0;
