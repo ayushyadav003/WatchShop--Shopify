@@ -5,7 +5,9 @@
         <div class="announcement-bar">
           <div class="announcement-innerbar">
              {% for block in section.blocks %}
-            <div class="slide" href="" ><p>{{ block.settings.announcement_text }}</p></div>
+            <div class="slide" href="{{ block.settings.ammouncement_link }}">
+              <p>{{ block.settings.announcement_text }}</p>
+            </div>
             {% endfor %}
           </div>
         </div>  
