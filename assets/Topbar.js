@@ -8,5 +8,5 @@ let allcookie = document.cookie.split(';').map(cookie => cookie.split('='))
              [key.trim()]:decodeURIComponent(value) }), {});
 
 if(allcookie.preference != 1){
-	document.getElementsByClassName("announcement-container")[0].style.display="flex";
+	document.getElementsByClassName("announcement-parentbar")[0].style.display="flex";
 }

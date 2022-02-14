@@ -1,23 +1,18 @@
+.announcement-parentbar{
+	display:none;
+}
 
-.announcement-container{
-  display: none;
+
+.announcement-container {
   position: relative;
   width: 100%;
   text-align: center;
-  font-size: medium;
+  font-size: 30px;
   line-height: 45px;
   height: 45px;
 }
 
-
-/*  {
-  display:grid;
-  position: relative;
-  width: 100vw;
-  padding: 20px 0 20px 0;
-  font-size: large;
-} */
-.announcement-bar {
+.announcement-container .announcement-bar {
   position: absolute;
   top: 0;
   left: 54%;
@@ -25,27 +20,11 @@
   height: 45px;
   overflow: hidden;
 }
-.announcement-innerbar {
+.announcement-container .announcement-bar .announcement-innerbar {
   position: relative;
   animation: rotate 8s ease-in-out infinite;
 }
-/* .slide {
-  position: absolute;
-  padding: 5px 0 0 0 ;
-  top: 0; 
-  left: calc(55% - 190px);
-  opacity: 0;
-  animation: display 3s infinite;
-  cursor: pointer;
-} */
-
-.cross-announcement-bar{
-  	margin: 0 10px 0 auto;
-  	cursor: pointer;
-  	font-size: 1.5rem;
-}
-
-.slide {
+.announcement-container .announcement-bar .slide {
   display: block;
 }
 
