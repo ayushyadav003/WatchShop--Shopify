@@ -1,6 +1,6 @@
 
 {% if section.settings.show_topbar %}
-	{% for block in section.blocks %}
+	{% for block in section.blocks.settings %}
       <div class="announcement-container">
         <div class="announcement-bar">
           <div class="slide" ><p>{{ block.settings.announcement_text }}</p></div>
