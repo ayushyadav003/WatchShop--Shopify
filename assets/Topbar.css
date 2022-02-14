@@ -3,8 +3,8 @@
   display: none;
   position: relative;
   width: 100%;
-  text-align: center;
   font-size: medium;
+  text-align: center;
   line-height: 45px;
   height: 45px;
 }
@@ -21,7 +21,6 @@
   position: absolute;
   top: 0;
   left: 54%;
-  text-align: left;
   height: 45px;
   overflow: hidden;
 }
