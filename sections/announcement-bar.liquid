@@ -4,11 +4,13 @@
       <div class="announcement-container">
         <div class="announcement-bar">
           <div class="announcement-innerbar">
-             {% for block in section.blocks %}
+            
             <div class="slide" href="{{ block.settings.ammouncement_link }}">
+               {% for block in section.blocks %}
               <p>{{ block.settings.announcement_text }}</p>
+               {% endfor %}
             </div>
-            {% endfor %}
+           
           </div>
         </div>  
       </div>
