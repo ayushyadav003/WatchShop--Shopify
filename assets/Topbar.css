@@ -4,37 +4,21 @@
 }
 
 
-@keyframes display {
-  0% {
-    transform: translateX(200px);
-    opacity: 0;
-  }
-  30% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  40% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  70% {
-    transform: translateX(-200px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(-200px);
-    opacity: 0;
-  }
-}
-
-.announcement-bar {
+/*  {
   display:grid;
   position: relative;
   width: 100vw;
   padding: 20px 0 20px 0;
   font-size: large;
+} */
+.announcement-bar .announcement-bar {
+  position: absolute;
+  top: 0;
+  left: 54%;
+  text-align: left;
+  height: 45px;
+  overflow: hidden;
 }
-
 .slide {
   position: absolute;
   padding: 5px 0 0 0 ;
