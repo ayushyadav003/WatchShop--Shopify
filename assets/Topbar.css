@@ -1,6 +1,12 @@
 
 .announcement-container{
-	display: none;
+  display: none;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  line-height: 45px;
+  height: 45px;
 }
 
 
@@ -23,7 +29,7 @@
   position: relative;
   animation: rotate 8s ease-in-out infinite;
 }
-.slide {
+/* .slide {
   position: absolute;
   padding: 5px 0 0 0 ;
   top: 0; 
@@ -31,10 +37,32 @@
   opacity: 0;
   animation: display 3s infinite;
   cursor: pointer;
-}
+} */
 
 .cross-announcement-bar{
   	margin: 0 10px 0 auto;
   	cursor: pointer;
   	font-size: 1.5rem;
+}
+
+.announcement-bar .announcement-bar .slide {
+  display: block;
+}
+
+@keyframes rotate {
+ 10%, 15%, 100% {
+            transform: translateY(0);
+  }
+  25%,36% {
+            transform: translateY(-45px);
+  }
+  46%,57% {
+            transform: translateY(-90px);
+  }
+  67%,78% {
+            transform: translateY(-135px);
+  }
+  88%, 99% {
+            transform: translateY(-180px);
+  }
 }
