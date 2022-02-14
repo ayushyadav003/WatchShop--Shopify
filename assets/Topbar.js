@@ -1,7 +1,6 @@
 function dismiss(val){
 	val.parentNode.style.display='none';
   	document.cookie = "preference= 1; expires=Sunday";
-  
 }
 
 let allcookie = document.cookie.split(';').map(cookie => cookie.split('='))
