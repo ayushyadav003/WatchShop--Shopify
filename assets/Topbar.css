@@ -24,6 +24,7 @@
 }
 .announcement-container .announcement-bar .slide {
   display: block;
+  padding: 10px 0 0 0;
 }
 
 .cross-announcement-bar{
