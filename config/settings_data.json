@@ -200,14 +200,14 @@
           "80af585a-f00a-4a82-9d8e-ecb0ccbff01a": {
             "type": "Text",
             "settings": {
-              "announcement_text": "Welcome to our store",
+              "announcement_text": "Get 10% off on your first order",
               "ammouncement_link": ""
             }
           },
           "ecb4e688-68c5-4c78-8319-fa8932eafe22": {
             "type": "Text",
             "settings": {
-              "announcement_text": "Welcome to our store",
+              "announcement_text": "Up to 20% off on order above 700",
               "ammouncement_link": ""
             }
           },
@@ -220,6 +220,7 @@
           },
           "df84085e-e1d4-40a4-9d49-5843b8e303e3": {
             "type": "Text",
+            "disabled": true,
             "settings": {
               "announcement_text": "Welcome to our store",
               "ammouncement_link": ""
@@ -227,6 +228,7 @@
           },
           "7bf10f94-efda-413d-8db3-b73fe8f5781c": {
             "type": "Text",
+            "disabled": true,
             "settings": {
               "announcement_text": "Welcome to our store",
               "ammouncement_link": ""
