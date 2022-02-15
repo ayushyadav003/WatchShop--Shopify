@@ -214,13 +214,12 @@
           "854a0188-a802-4bea-b877-eebc50c454b0": {
             "type": "Text",
             "settings": {
-              "announcement_text": "Welcome to our store",
+              "announcement_text": "Buy 2  Get 1 free.",
               "ammouncement_link": ""
             }
           },
           "df84085e-e1d4-40a4-9d49-5843b8e303e3": {
             "type": "Text",
-            "disabled": true,
             "settings": {
               "announcement_text": "Welcome to our store",
               "ammouncement_link": ""
