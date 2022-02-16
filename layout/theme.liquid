@@ -112,7 +112,7 @@
   {% section 'header' %}
   
   <div>
-    <a href="{{ routes.cart_url }}" class="header-cart-btn cart-toggle" style="position:fixed;top:80%;border-radius:10rem;padding: 10px;">
+    <a href="{{ routes.cart_url }}" class="header-cart-btn cart-toggle" style="position:fixed;top:80%;left:80%;border-radius:10rem;padding: 10px;">
       <span class="icon icon-cart" ></span>
       <span class="cart-count cart-badge--desktop {% if cart.item_count == 0 %}hidden-count{% endif %}">{{ cart.item_count }}</span>
   	</a>
