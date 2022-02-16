@@ -76,10 +76,7 @@
         {% for product in collection.products %}
           {% if product.available %}
             {% include 'product-grid-item' with grid_item_width %}
-        	{% unless product.unavailable %}
-        	{% include 'product-grid-item' with grid_item_width %}
-        	{% endunless %}
-          {% endif %}
+        {% endif %}
         {% else %}
           <div class="grid-item">
             <p>{{ 'collections.general.no_matches' | t }}</p>
