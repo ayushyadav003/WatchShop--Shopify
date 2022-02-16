@@ -74,6 +74,7 @@
         {%- endcase -%}
 
         {% for product in collection.products %}
+        {% if product.available %}
           {% comment %}
           {% if has_sidebar %}
             {% assign grid_item_width = 'large--one-quarter medium--one-third small--one-half' %}
@@ -82,7 +83,7 @@
           {% endif %}
           {% endcomment %}
           {% include 'product-grid-item' with grid_item_width %}
-
+ {% endif %}
         {% else %}
 
           <div class="grid-item">
