@@ -1,5 +1,12 @@
 
 <header class="site-header" role="banner" data-section-id="{{ section.id }}" data-section-type="header-section">
+    <div>
+    <a href="{{ routes.cart_url }}" class="header-cart-btn cart-toggle" 
+       style="position:fixed;top:80%;border-radius:10rem;padding:10px;">
+      <span class="icon icon-cart" ></span>
+      <span class="cart-count cart-badge--desktop {% if cart.item_count == 0 %}hidden-count{% endif %}">{{ cart.item_count }}</span>
+  	</a>
+  </div>
   <div class="wrapper">
     <div class="grid--full">
       <div class="grid-item large--one-half">
@@ -42,13 +49,6 @@
           </div>
         {% endif %}
       </div>
-  <div>
-    <a href="{{ routes.cart_url }}" class="header-cart-btn cart-toggle" 
-       style="position:fixed;top:80%;border-radius:10rem;padding:10px;">
-      <span class="icon icon-cart" ></span>
-      <span class="cart-count cart-badge--desktop {% if cart.item_count == 0 %}hidden-count{% endif %}">{{ cart.item_count }}</span>
-  	</a>
-  </div>
       <div class="grid-item large--one-half text-center large--text-right">
         {% if section.settings.show_announcement or shop.customer_accounts_enabled %}
           <div class="site-header--text-links{% if section.settings.announcement_text == blank %} medium-down--hide{% endif %}">
