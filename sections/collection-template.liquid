@@ -76,9 +76,9 @@
         {% for product in collection.products %}
           {% if product.available %}
             {% include 'product-grid-item' with grid_item_width %}
-        	{% if product.unavailable %}
+        	{% unless product.unavailable %}
         	{% include 'product-grid-item' with grid_item_width %}
-        	{% endif %}
+        	{% endunless %}
           {% endif %}
         {% else %}
           <div class="grid-item">
