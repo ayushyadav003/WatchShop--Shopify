@@ -9,7 +9,7 @@
   {% assign has_sidebar = true %}
 {% endif %}
 
-<div id="CollectionSection" data-section-id="{{ section.id }}" data-section-type="collection-template">
+<div id="CollectionSection" data-section-id="{{ section.id }}" data-section-tfpe="collection-template">
   <div class="grid grid-border">
 
     {% if has_sidebar %}
@@ -74,6 +74,7 @@
         {%- endcase -%}
 
         {% for product in collection.products %}
+        {% unless product.available %}
           {% comment %}
           {% if has_sidebar %}
             {% assign grid_item_width = 'large--one-quarter medium--one-third small--one-half' %}
@@ -82,9 +83,9 @@
           {% endif %}
           {% endcomment %}
           {% include 'product-grid-item' with grid_item_width %}
-
+		{% endunless %}
         {% else %}
-
+			
           <div class="grid-item">
             <p>{{ 'collections.general.no_matches' | t }}</p>
           </div>
