@@ -34,6 +34,7 @@
     <div class="grid">
       <div class="grid-item large--eleven-twelfths text-center">
         <div class="product-photo-container" id="productPhotoContainer-{{ section.id }}">
+           <span class="icon icon-cart"></span>
           {% assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image %}
           {% for image in product.images %}
             {%- capture img_wrapper_id -%}productPhotoWrapper-{{ section.id }}-{{ image.id }}{%- endcapture -%}
