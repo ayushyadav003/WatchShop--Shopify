@@ -183,7 +183,7 @@
 {% endif %}
 
 
-{% if cart.item_count > 0 %}
+{% if cart.item_count > 0%}
   <form action="{{ routes.cart_url2 }}" method="post" class="cart-form" data-cart-form novalidate>
 
     <h1 class="h2">{{ 'cart.general.title' | t }}</h1>
