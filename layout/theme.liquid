@@ -114,6 +114,12 @@
   <main class="wrapper main-content{% if request.page_type == blank %} main-content--no-template{% endif %}" role="main">
 
     {{ content_for_layout }}
+              
+          
+<a href="{{ routes.cart_url }}" class="header-cart-btn cart-toggle">
+          <span class="icon icon-cart"></span>
+          {{ 'layout.cart.cart' | t }} <span class="cart-count cart-badge--desktop {% if cart.item_count == 0 %}hidden-count{% endif %}">{{ cart.item_count }}</span>
+        </a>
 
   </main>
 
