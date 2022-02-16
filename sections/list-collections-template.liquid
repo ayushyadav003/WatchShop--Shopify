@@ -26,6 +26,7 @@
 {% endif %}
 
 {% if section.settings.display_type == 'all' %}
+{% if product.available %}
   {% case section.settings.sort %}
     {% when 'products_high' or 'products_low' %}
       {%- assign list_collections = collections | sort: 'all_products_count' -%}
@@ -76,6 +77,7 @@
       {% endif %}
     {% endfor %}
   </div>
+{% endif %}
 {% endif %}
 
 
