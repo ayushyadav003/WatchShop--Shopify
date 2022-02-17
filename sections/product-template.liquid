@@ -31,7 +31,6 @@
   <meta itemprop="image" content="{{ product.featured_image.src | img_url: 'grande' }}">
 
   <div class="grid-item large--two-fifths">
-    hello
     <div class="grid">
       <div class="grid-item large--eleven-twelfths text-center">
         <div class="product-photo-container" id="productPhotoContainer-{{ section.id }}">
@@ -255,6 +254,11 @@
     </script>
   {% endif %}
 {% endunless %}
+    <div class="payment-buttons payment-buttons--{{ section.settings.add_to_cart_button_size }}">
+          <button type="submit" name="add" id="addToCart-{{ section.id }}" class="{{ btn_class }} btn--add-to-cart{% if section.settings.enable_payment_button and product.selling_plan_groups == empty %} btn--secondary-accent{% endif %}">
+            <span class="icon icon-cart"></span>
+            <span id="addToCartText-{{ section.id }}">{{ 'products.product.add_to_cart' | t }}</span>
+          </button>
 </div>
 
 
