@@ -286,3 +286,7 @@
     setTimeout(scroller, 0);
   });
 }));
+
+$(document).ready(function(){
+  $('.atc-container').sticky({zIndex:999});
+	});
