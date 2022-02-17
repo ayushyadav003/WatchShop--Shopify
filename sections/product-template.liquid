@@ -259,7 +259,7 @@
         var scroll =$(window).scrollTop();
         
         if(scroll > height){
-        	$(".btn--add-to-cart").addClass("fixedCart");
+        	$("#fixedCart").css({"background-color": "yellow", "font-size": "20%"});
         }else{
         $(".btn--add-to-cart").removeClass("fixedCart")
         }
@@ -280,14 +280,7 @@
       padding:0 0 0 24%;
     } */
  
-    #fixedCart{
-    	display: none;
-      	width: 100%;
-      	position: fixed;
-      	top: 93%;
-      	left: 0%;
-      	bottom: 0%;
-    }
+
   </style>
   
   
