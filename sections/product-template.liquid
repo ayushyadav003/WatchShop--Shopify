@@ -254,7 +254,7 @@
     </script>
   {% endif %}
 {% endunless %}
-    <div class="payment-buttons payment-buttons--{{ section.settings.add_to_cart_button_size }}"
+    <div id="fixedCart" class="payment-buttons payment-buttons--{{ section.settings.add_to_cart_button_size }}"
          style="display:relative;width:70%;position:fixed; background:red;bottom:5px;" >
           <button type="submit" name="add" id="addToCart-{{ section.id }}" class="{{ btn_class }} btn--add-to-cart{% if section.settings.enable_payment_button and product.selling_plan_groups == empty %} btn--secondary-accent{% endif %}">
             <span class="icon icon-cart"></span>
@@ -263,6 +263,10 @@
 	</div>
   
   <script>
+    if(screen.height>900)
+    {
+      document.querySelector("#fixedCatrt").style.display="none";
+    }
  	console.log(screen.height)
   </script>
   
