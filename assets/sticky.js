@@ -287,6 +287,6 @@
   });
 }));
 
-$(document).ready(function(){
-  $('.atc-container').sticky({zIndex:999});
-	});
+// $(document).ready(function(){
+//   $('.atc-container').sticky({zIndex:999});
+// 	});
