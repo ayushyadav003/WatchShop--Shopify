@@ -1,13 +1,6 @@
 
 <header class="site-header" role="banner" data-section-id="{{ section.id }}" data-section-type="header-section">
-    <div>
-    <a href="{{ routes.cart_url2 }}" class="header-cart-btn cart-toggle" 
-       style="position:fixed;top:80%;border-radius:10rem;padding:10px;">
-      <span class="icon icon-cart" ></span>
-      <span class="cart-count cart-badge--desktop {% if cart.item_count == 0 %}hidden-count{% endif %}">{{ cart.item_count }}</span>
-  	</a>
-  </div>
-  <div class="wrapper">
+   <div class="wrapper">
     <div class="grid--full">
       <div class="grid-item large--one-half">
         {% if request.page_type == 'index' %}
