@@ -288,5 +288,5 @@
 }));
 
 $(document).ready(function(){
-  $('.atc-container').sticky({top:1000});
+  $('.atc-container').sticky(zIndex:999});
 	});
