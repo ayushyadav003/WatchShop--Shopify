@@ -255,7 +255,7 @@
   {% endif %}
 {% endunless %}
     <div class="payment-buttons payment-buttons--{{ section.settings.add_to_cart_button_size }}"
-         style="width:100%;position:fixed;" >
+         style="width:100%;position:fixed; background:red" >
           <button type="submit" name="add" id="addToCart-{{ section.id }}" class="{{ btn_class }} btn--add-to-cart{% if section.settings.enable_payment_button and product.selling_plan_groups == empty %} btn--secondary-accent{% endif %}">
             <span class="icon icon-cart"></span>
             <span id="addToCartText-{{ section.id }}">{{ 'products.product.add_to_cart' | t }}</span>
