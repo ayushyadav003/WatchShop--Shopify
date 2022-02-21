@@ -1,8 +1,12 @@
 
-	<div>
-      {% for block in section.blocks %}
-      	<img alt="" src="{{ img_url }}">
-      {% endfor %}
+	<div id="slideshow">
+      <ul>
+        <li>
+          {% for block in section.blocks %}
+          	<img alt="" src="{{ img_url }}">
+          {% endfor %}
+        </li>
+      </ul>
 	</div>
 
 
