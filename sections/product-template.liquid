@@ -262,17 +262,19 @@
   </div>
   
   <script>
-     $(window).scroll(function (event){
-      	var height = $(window).height();
-        var scroll =$(window).scrollTop();
-        
-        if(scroll > height){
-          $("#fixedCart").css({"background":"black","width":"100%","position":"fixed",
-                               left:"0%",bottom:"0"});
-        }else{
-          $("#fixedCart").css({"width":"auto","position":"relative"});
-        }
-      });
+    if ( $(window).width() > 800 ) {
+       $(window).scroll(function (event){
+          var height = $(window).height();
+          var scroll =$(window).scrollTop();
+
+          if(scroll > height){
+            $("#fixedCart").css({"background":"black","width":"100%","position":"fixed",
+                                 left:"0%",bottom:"0"});
+          }else{
+            $("#fixedCart").css({"width":"auto","position":"relative"});
+          }
+        });
+    }
   </script>
   
   
