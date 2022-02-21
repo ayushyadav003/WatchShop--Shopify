@@ -254,12 +254,15 @@
   {% endif %}
 {% endunless %}
   
-  <div class="payment-buttons payment-buttons--{{ section.settings.add_to_cart_button_size }}">
-  	<button type="submit" name="add" id="addToCart-{{ section.id }}" class="{{ btn_class }} btn--add-to-cart{% if section.settings.enable_payment_button and product.selling_plan_groups == empty %} btn--secondary-accent{% endif %}">
-      <span class="icon icon-cart"></span>
-      <span id="addToCartText-{{ section.id }}">{{ 'products.product.add_to_cart' | t }}</span>
-    </button>
-  </div>
+    <div  class="payment-buttons payment-buttons--{{ section.settings.add_to_cart_button_size }}">
+            <button id="fixedCart" type="submit" name="add" id="addToCart-{{ section.id }}" class="{{ btn_class }} btn--add-to-cart{% if section.settings.enable_payment_button and product.selling_plan_groups == empty %} btn--secondary-accent{% endif %}">
+              <span class="icon icon-cart"></span>
+              <span id="addToCartText-{{ section.id }}">{{ 'products.product.add_to_cart' | t }}</span>
+            </button>
+          {% if section.settings.enable_payment_button %}
+            {{ form | payment_button }}
+          {% endif %}
+        </div>
   
   <script>
     if ( $(window).width() > 800 ) {
