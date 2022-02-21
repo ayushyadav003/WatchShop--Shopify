@@ -256,7 +256,7 @@
 {% endunless %}
   
   <div>
-  	<button type="submit" name="add" id="addToCart-{{ section.id }}" class="{{ btn_class }} btn--add-to-cart{% if section.settings.enable_payment_button and product.selling_plan_groups == empty %} btn--secondary-accent{% endif %}">
+  	<button type="submit" name="add" id="addToCart-{{ section.id }}" class="{{ btn_class }} {% if section.settings.enable_payment_button and product.selling_plan_groups == empty %} btn--secondary-accent{% endif %}">
       <span class="icon icon-cart"></span>
       <span id="addToCartText-{{ section.id }}">{{ 'products.product.add_to_cart' | t }}</span>
     </button>
