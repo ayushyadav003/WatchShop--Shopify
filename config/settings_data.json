@@ -244,6 +244,32 @@
         "settings": {
           "show_topbar": true
         }
+      },
+      "image-slider00": {
+        "type": "image-slider00",
+        "blocks": {
+          "51458f10-069c-40fe-a30b-3d52a9926702": {
+            "type": "image",
+            "settings": {
+              "silder_image": "shopify:\/\/shop_images\/banner-img.png",
+              "image_link": ""
+            }
+          },
+          "25105edf-c02e-48ec-9aa5-0303b1a56cdb": {
+            "type": "image",
+            "settings": {
+              "silder_image": "shopify:\/\/shop_images\/blog-banner.png",
+              "image_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "51458f10-069c-40fe-a30b-3d52a9926702",
+          "25105edf-c02e-48ec-9aa5-0303b1a56cdb"
+        ],
+        "settings": {
+          "show_image": true
+        }
       }
     },
     "content_for_index": [
