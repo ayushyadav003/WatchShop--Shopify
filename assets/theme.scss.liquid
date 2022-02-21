@@ -2100,6 +2100,11 @@ html input[disabled] {
   text-transform: uppercase;
   {% endif %}
   @include transition(background-color 0.2s ease-out);
+  
+  &.fixedATC {
+    min-height: 44px;
+    white-space: normal;
+  }  
 
   &.btn--add-to-cart {
     min-height: 44px;
