@@ -1,11 +1,13 @@
 
 	<div id="slideshow">
       <ul>
-        <li>
-          {% for block in section.blocks %}
-          	{{ section.settings.silder_image}}
-          {% endfor %}
-        </li>
+        {% for block in section.blocks %}
+          <li id="show_image">
+          {% if block.settings.link %}
+            <a href="{{ block.settings.image_link }}" class="">
+          {% endif %}
+          </li>
+         {% endfor %}
       </ul>
 	</div>
 
