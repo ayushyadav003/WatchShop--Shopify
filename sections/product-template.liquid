@@ -254,14 +254,14 @@
   {% endif %}
 {% endunless %}
  
-  {% form 'product', product, class:form_class, id:form_id, data-product-form: '' %}
+ 
   <div action="/cart/add"  class="payment-buttons payment-buttons--{{ section.settings.add_to_cart_button_size }}">
       <button type="submit" name="add" class="btn-fixedATC" >
         <span class="icon icon-cart"></span>
         <span id="addToCartText-{{ section.id }}">+</span>
       </button>
   </div>
-  {% endform %}
+ 
   
   <script>
     if ( $(window).width() > 800 ) {
