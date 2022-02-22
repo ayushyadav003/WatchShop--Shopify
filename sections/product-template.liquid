@@ -254,8 +254,8 @@
   {% endif %}
 {% endunless %}
   
-  <div action="/cart/add"  class="payment-buttons payment-buttons--{{ section.settings.add_to_cart_button_size }}">
-      <button type="submit" name="add" class="btn-fixedATC" >
+<div id="ProductSection" data-section-id="{{ section.id }}" data-section-type="product-template" data-zoom-toggle="zoom-in" data-zoom-enabled="{{ section.settings.product_image_zoom_enable }}" data-related-enabled="{{ section.settings.product_related_enable }}" data-social-sharing="{{ section.settings.social_sharing }}" data-show-compare-at-price="{{ section.settings.product_show_compare_at_price }}" data-stock="{{ section.settings.product_quantity_message }}" data-incoming-transfer="{{ section.settings.product_incoming_message }}" data-ajax-cart-method="{{ settings.ajax_cart_method }}">
+   <button type="submit" name="add" class="btn-fixedATC" >
         <span class="icon icon-cart"></span>
         <span id="addToCartText-{{ section.id }}">+</span>
       </button>
