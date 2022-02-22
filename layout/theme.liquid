@@ -110,11 +110,13 @@
   
   {% section 'header' %}
   
-  {% section 'image-slider00' %}
+
   
 
   <main class="wrapper main-content{% if request.page_type == blank %} main-content--no-template{% endif %}" role="main">
 
+      {% section 'image-slider00' %}
+    
     {{ content_for_layout }}
               
   </main>
