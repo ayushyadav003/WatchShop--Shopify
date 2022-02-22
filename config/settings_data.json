@@ -100,12 +100,14 @@
           "slide-0": {
             "type": "image",
             "settings": {
+              "slide": "shopify:\/\/shop_images\/blog-banner.png",
               "link": ""
             }
           },
           "slide-1": {
             "type": "image",
             "settings": {
+              "slide": "shopify:\/\/shop_images\/blog-banner.png",
               "link": ""
             }
           },
