@@ -3,7 +3,7 @@
       <div id="slideshow">
         {% for block in section.blocks %}
           <div id="show_image" class="silde-wrapper" >
-          	<img class="" src="{{ block.settings.silder_image | img_url: '400x800' }}" >
+          	<img class="slide" src="{{ block.settings.silder_image | img_url: '400x800' }}" >
           </div>
          {% endfor %}
       </div>
