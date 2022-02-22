@@ -10,6 +10,7 @@
 	</div>
 
 <style>
+    /* Styling the area of the slides */
      
     #slideshow {
         overflow: hidden;
@@ -17,12 +18,18 @@
         width: 728px;
         margin: 3em auto;
     }
-  
+     
+    /* Style each of the sides
+    with a fixed width and height */
+     
     .slide {
         float: left;
         height: 510px;
         width: 728px;
-    } 
+    }
+     
+    /* Add animation to the slides */
+     
     .slide-wrapper {
          
         /* Calculate the total width on the
@@ -34,10 +41,32 @@
         animation: slide 10s ease infinite;
     }
      
+    /* Set the background color
+    of each of the slides */
      
-
+    .slide:nth-child(1) {
+        background: green;
+    }
+     
+    .slide:nth-child(2) {
+        background: pink;
+    }
+     
+    .slide:nth-child(3) {
+        background: red;
+    }
+     
+    .slide:nth-child(4) {
+        background: yellow;
+    }
+     
+    /* Define the animation
+    for the slideshow */
+     
     @keyframes slide {
-
+         
+        /* Calculate the margin-left for
+      each of the slides */
         20% {
             margin-left: 0px;
         }
@@ -89,5 +118,16 @@
 {% endstylesheet %}
 
 {% javascript %}
+
+    $("#slideshow > div:gt(0)").hide();
+
+    setInterval(function() { 
+      $('#slideshow > div:first')
+      .fadeOut(1000)
+      .next()
+      .fadeIn(1000)
+      .end()
+      .appendTo('#slideshow');
+    }, 3000);
 
 {% endjavascript %}
