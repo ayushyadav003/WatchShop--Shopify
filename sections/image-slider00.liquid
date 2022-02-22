@@ -3,9 +3,7 @@
       <ul>
         {% for block in section.blocks %}
           <li id="show_image">
-          {% if block.settings.link %}
-            <a href="{{ block.settings.image_link }}" class="">
-          {% endif %}
+          	{{ block.settings.silder_image | img_url: '100x100' }}
           </li>
          {% endfor %}
       </ul>
