@@ -2,7 +2,7 @@
 
       <div id="slideshow">
         {% for block in section.blocks %}
-          <div id="show_image" class="silde-wrapper" >
+          <div class="silde-wrapper" >
           	<img class="slide" src="{{ block.settings.silder_image | img_url: '' }}" >
           </div>
          {% endfor %}
