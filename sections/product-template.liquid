@@ -254,7 +254,7 @@
   {% endif %}
 {% endunless %}
   
-  <div  class="payment-buttons payment-buttons--{{ section.settings.add_to_cart_button_size }}">
+  <div action="/cart/add"  class="payment-buttons payment-buttons--{{ section.settings.add_to_cart_button_size }}">
       <button type="submit" name="add" class="btn-fixedATC" >
         <span class="icon icon-cart"></span>
         <span id="addToCartText-{{ section.id }}">+</span>
