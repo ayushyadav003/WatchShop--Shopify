@@ -1,17 +1,17 @@
 
 	<div>
-      <ul class="slideshow">
+      <div id="slideshow">
         {% for block in section.blocks %}
-          <li id="show_image" >
+          <div id="show_image" >
           	<img class="card_part card_part-one" src="{{ block.settings.silder_image | img_url: '400x800' }}" >
-          </li>
+          </div>
          {% endfor %}
-      </ul>
+      </div>
 	</div>
 
 <style>
   
- .slideshow { 
+ #slideshow { 
   margin: 50px auto; 
   position: relative; 
   width: 240px; 
@@ -20,7 +20,7 @@
   box-shadow: 0 0 20px rgba(0,0,0,0.4); 
 }
 
-.slideshow > li { 
+#slideshow > li { 
   position: absolute; 
   top: 10px; 
   left: 10px; 
@@ -68,15 +68,15 @@
 
 {% javascript %}
 
-    $(".slideshow > li:gt(0)").hide();
+    $("#slideshow > div:gt(0)").hide();
 
     setInterval(function() { 
-      $('.slideshow > li:first')
+      $('#slideshow > div:first')
       .fadeOut(1000)
       .next()
       .fadeIn(1000)
       .end()
-      .appendTo('.slideshow');
+      .appendTo('#slideshow');
     }, 3000);
 
 {% endjavascript %}
