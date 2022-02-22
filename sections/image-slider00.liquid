@@ -1,6 +1,6 @@
 
-	<div id="slideshow">
-      <ul>
+	<div>
+      <ul class="slideshow">
         {% for block in section.blocks %}
           <li id="show_image">
           	<img src="{{ block.settings.silder_image | img_url: '400x800' }}" >
