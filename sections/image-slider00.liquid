@@ -3,7 +3,7 @@
       <ul>
         {% for block in section.blocks %}
           <li id="show_image">
-          	{{ block.settings.silder_image | img_url: '100x100' }}
+          	<img src="{{ block.settings.silder_image | img_url: '100x100' }}" >
           </li>
          {% endfor %}
       </ul>
