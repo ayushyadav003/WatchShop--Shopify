@@ -1,9 +1,10 @@
 
-	<div id="slideshow">
+	<div >
       <ul>
         {% for block in section.blocks %}
           <li id="show_image">
-          	<img src="{{ block.settings.silder_image | img_url: '400x800' }}" >
+            <a href=""
+          	<img alt="image" src="{{ block.settings.silder_image | img_url: '400x800' }}" >
           </li>
          {% endfor %}
       </ul>
