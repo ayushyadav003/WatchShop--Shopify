@@ -99,6 +99,7 @@
         "blocks": {
           "slide-0": {
             "type": "image",
+            "disabled": true,
             "settings": {
               "slide": "shopify:\/\/shop_images\/blog-banner.png",
               "link": ""
@@ -106,6 +107,7 @@
           },
           "slide-1": {
             "type": "image",
+            "disabled": true,
             "settings": {
               "slide": "shopify:\/\/shop_images\/blog-banner.png",
               "link": ""
@@ -260,7 +262,7 @@
           "25105edf-c02e-48ec-9aa5-0303b1a56cdb": {
             "type": "image",
             "settings": {
-              "silder_image": "shopify:\/\/shop_images\/blog-banner.png",
+              "silder_image": "shopify:\/\/shop_images\/719.jpeg",
               "image_link": ""
             }
           }
