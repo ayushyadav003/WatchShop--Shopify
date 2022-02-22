@@ -2,7 +2,7 @@
 	<div>
       <ul class="card">
         {% for block in section.blocks %}
-          <li id="show_image">
+          <li id="show_image" class="card_part card_part-one">
           	<img src="{{ block.settings.silder_image | img_url: '400x800' }}" >
           </li>
          {% endfor %}
