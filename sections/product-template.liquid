@@ -202,7 +202,7 @@
       {% endform %}
       
 <!--		Accordion		-->
-      <div>
+      <div class="accordionContainer">
       	<button class="accordion">Description 1</button>
           <div class="panel">
             <p>is simply dummy text of the printing and typesetting industry. 
@@ -316,7 +316,7 @@
   <script>
     
     if ( $(window).width() > 800 ) {
-      $('.accordion').css({"display":"flex"})
+      $('.accordionContainer').css({"display":"flex"})
     }
     
       let acc = document.getElementsByClassName("accordion");
