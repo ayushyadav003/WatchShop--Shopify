@@ -344,7 +344,7 @@
     
    
       let acc = document.getElementsByClassName("accordion");
-    	   acc[0].addEventListener("click", function() {
+    	   acc[0].(function() {
           this.classList.toggle("active");
           let panel = this.nextElementSibling;
           if (panel.style.display === "block") {
