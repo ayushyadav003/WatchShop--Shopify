@@ -330,19 +330,32 @@
       display: none;
       overflow: hidden;
 		}
+     @media only screen and (min-width: 600px) {
+      .accordionContainer{
+      	display: flex; 
+       }
+	.accordion {
+      display:flex;
+      background:transparent;
+      cursor: pointer;
+      padding: 10px;
+      width: 100%;
+      margin:0 10em 0 0;
+      text-align: left;
+      border: none;
+      outline: none;
+      transition: 0.4s;
+	}
+    .accordion:hover {
+    	border-bottom:2px solid black;
+  	}
+	}
   </style>
   
   
   
   <script>
-    
-    if ( $(window).width() > 800 ) {
-      $('.accordionContainer').css({"display":"flex"});
-      $('.accordion').addClass('accordion2')
-    }
-   
-    
-   
+      
       let acc = document.getElementsByClassName("accordion");
 
       for (let i = 0; i < acc.length; i++) {
