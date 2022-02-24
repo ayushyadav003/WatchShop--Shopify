@@ -323,7 +323,7 @@
     
     if ( $(window).width() > 800 ) {
       $('.accordionContainer').css({"display":"flex"});
-      $('.accordion').css({"display":"grid","width":"100%"})
+      $('.accordion').css({"display":"grid","grid-template-columns": "auto auto auto"})
     }
     
       let acc = document.getElementsByClassName("accordion");
