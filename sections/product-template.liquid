@@ -309,16 +309,8 @@
     .accordion:hover {
     background-color: #ccc;
   	}
- 
-    .panel {
-      padding: 10px 18px;
-      font-weight: bold;
-      display: none;
-      overflow: hidden;
-		}
-    @media only screen and (min-width: 600px) {
-	.accordion {
-      display:flex;
+      .accordion2 {
+      display:grid;
       background:transparent;
       cursor: pointer;
       padding: 10px;
@@ -330,14 +322,26 @@
       transition: 0.4s;
 	}
     .accordion:hover {
-    	border-bottom:2px solid black;
+    border-bottom:2px solid black;
   	}
-	}
+    .panel {
+      padding: 10px 18px;
+      font-weight: bold;
+      display: none;
+      overflow: hidden;
+		}
   </style>
   
   
   
   <script>
+    
+    if ( $(window).width() > 800 ) {
+      $('.accordionContainer').css({"display":"flex"});
+      $('.accordion').addClass('accordion2')
+    }
+   
+    
    
       let acc = document.getElementsByClassName("accordion");
 
