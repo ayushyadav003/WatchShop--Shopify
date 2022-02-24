@@ -315,22 +315,6 @@
       display: none;
       overflow: hidden;
 		}
-    
-     .accordion2 {
-       display:block;
-      background: transparent;
-      color: #444;
-      cursor: pointer;
-      padding: 10px;
-      width: 100%;
-      text-align: left;
-      border: none;
-      outline: none;
-      transition: 0.4s;
-	}
-      .accordion2:hover {
-         text-decoration: underline;
-  	}
   </style>
   
   
@@ -339,7 +323,8 @@
     
     if ( $(window).width() > 800 ) {
       $('.accordionContainer').css({"display":"flex"});
-      $('accordion').removeClass('accordion').addClass("accordion2");
+      
+      $('.accordion').css({"display":"grid","background":"transparent"})
     }
     
       let acc = document.getElementsByClassName("accordion");
