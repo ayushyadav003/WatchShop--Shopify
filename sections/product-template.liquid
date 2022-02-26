@@ -379,49 +379,6 @@ ul.tabs:before, ul.tabs:after {
 ul.tabs:after {
   clear: both;
 }
-</style>
-    
-/*     Accordion styling */
-  	.accordion {
-      background-color: gray;
-      color: #444;
-      cursor: pointer;
-      padding: 10px;
-      width: 100%;
-      text-align: left;
-      border: none;
-      outline: none;
-      transition: 0.4s;
-	}
-    .accordion:hover {
-    background-color: #ccc;
-  	}
-
-    .panel {
-      padding: 10px 18px;
-      font-weight: bold;
-      display: none;
-      overflow: hidden;
-		}
-    
-     @media only screen and (min-width: 600px) {
-      .accordionContainer{
-      	display: flex; 
-       }
-      .accordion {
-        display:flex;
-        background:transparent;
-        cursor: pointer;
-        padding: 10px;
-        width: 100%;
-        margin:0 10em 0 0;
-        text-align: left;
-        transition: 0.4s;
-      }
-      .accordion:hover {
-          border-bottom:2px solid black;
-      }
-	}
   </style>
   
   
@@ -448,41 +405,6 @@ ul.tabs:after {
     });
   });
       
-      let acc = document.getElementsByClassName("accordion");
-
-      for (let i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-          /* Toggle between adding and removing the "active" class,
-          to highlight the button that controls the panel */
-          this.classList.toggle("active");
-
-          /* Toggle between hiding and showing the active panel */
-          let panel = this.nextElementSibling;
-          if (panel.style.display === "block") {
-            panel.style.display = "none";
-          } else {
-            panel.style.display = "block";
-          }
-        });
-      }
-
-    if ( $(window).width() > 800 ) {
-       $(window).scroll(function (event){
-          var height = $(window).height();
-          var scroll =$(window).scrollTop();
-
-          if(scroll > height){
-            $("#fixedCart").css({"background":"black","width":"100%","position":"fixed",
-                                 left:"0%",bottom:"0"});
-          }else{
-            $("#fixedCart").css({"width":"auto","position":"relative"});
-          }
-        });
-      
-      $('#smallCart').click(function(){
-        $('.btn--add-to-cart').click();
-      });
-    }
   </script>
   
   
