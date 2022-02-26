@@ -255,23 +255,6 @@
   </div>
 </div>
   
-  
-  <div>
-  <ul class="tabs2">
-    <li><a href="#tab-21">Description</a></li>
-  	<div id="tab-21">
-  	<p>Hello1</p>
-  	</div>
-    <li><a href="#tab-22">Shipping</a></li>
-  	<div id="tab-22">
-   	<p>Hello2</p>
-  	</div>
-    <li><a href="#tab-23">Returns</a></li>
-  	<div id="tab-23">
-   	<p>Hello3</p>
-  	</div>
-  </ul>
-</div>
 
 {% if section.settings.related_products_enable %}
   {% assign grid_item_width = 'large--one-fifth medium--one-third small--one-half' %}
@@ -360,34 +343,7 @@
       margin: 2rem 0;
       padding: 0;
         }
-   ul.tabs2 {
-      display: grid;
-      margin: 2rem 0;
-      padding: 0;
-    }
-  ul.tabs2 li {
-      float: left;
-      height: 30px;
-      margin-bottom: 1rem;
-      width: auto;
-      margin: 0 10% 0 0;
-    }
-    ul.tabs2 li a {
-      font-size: 30px;
-      line-height: 30px;      
-      font-weight:bold;
-      font-family: 'Gotham', sans-serif;
-      width: auto;
-      padding:5px 10px;
-      color: #00377b;
-	  transition: color .1s;
-    }
-    ul.tabs2 li a.active {
-      color: #c89b42;
-      border-bottom: 1px solid #c89b42;
-      position: relative;
-    }
-    }
+ 
     
     }
   </style>
@@ -415,25 +371,7 @@
       });
     });
   });
-            $(document).ready(function() {
-    $('ul.tabs2).each(function(){
-      var active, content, links = $(this).find('a');
-      active = links.first().addClass('active');
-      content = $(active.attr('href'));
-      links.not(':first').each(function () {
-        $($(this).attr('href')).hide();
-      });
-      $(this).find('a').click(function(e){
-        active.removeClass('active');
-        content.hide();
-        active = $(this);
-        content = $($(this).attr('href'));
-        active.addClass('active');
-        content.show();
-        return false;
-      });
-    });
-  });
+      
   </script>
   
   
