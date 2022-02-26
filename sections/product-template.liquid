@@ -216,62 +216,46 @@
 </div>
   
 <!--   Accordion -->
-<div class="accordion1" >
-  <ul class="tabs">
-    <li><a href="#tab-1">Description</a></li>
-    <li><a href="#tab-2">Shipping</a></li>
-    <li><a href="#tab-3">Returns</a></li>
-  </ul>
-  <div id="tab-1">
-    <p>HBaby Dove Rich Moisture Tip-To-Toe Baby Wash (400ml):
-• 100% skin-natural nutrients* help baby skin retain its natural moisture.
-• Hypoallergenic formula that’s as gentle as water your new-born’s first bath
-• Tear-free & pH neutral to baby skin
-• Free from dyes, parabens, phthalates and sulphates.
-• Made with prebiotic moisturizer to support baby skin’s natural health
-• Mild fragrance specially developed for babies
-• Paediatrician approved, safe for new-born.
-• Made from 100% recyclable plastic
-• Certified cruelty-free by PETA</p>
-    <p>
-    Baby Dove Rich Moisture Shampoo (400ml):
-• 100% skin-natural nutrients* help your baby’s scalp retain natural moisture
-• Tear-free & pH neutral to baby skin
-• Formulated with ¼ moisturizing cream.
-• Made with a hypoallergenic formula that’s as gentle as water your new-born’s first bath.
-• Made with prebiotic moisturizer to support baby skin’s natural health
-• Free from dyes, parabens, phthalates and sulphates.
-• Caring baby shampoo infused with a delicate, comforting scent
-• Paediatrician approved, safe for new-born.
-• Made from 100% recyclable plastic
-• Certified cruelty-free by PETA
-    </p>
-  </div>
-  <div id="tab-2">
-   <img src= "https://assets.entrepreneur.com/content/3x2/2000/20161013103704-Logistics.jpeg" 
-        alt="pic" height="400px" width="900px"/>
-  </div>
-  <div id="tab-3">
-   <p>Hello3</p>
-  </div>
-</div>
-  
-  <div class="accordion2">
-  	<button class="accordion">Section 1</button>
-    <div class="panel">
-      <p>Lorem ipsum...</p>
+  <div>
+    <ul class="tabs">
+      <li><a href="#tab-1">Description</a></li>
+      <li><a href="#tab-2">Shipping</a></li>
+      <li><a href="#tab-3">Returns</a></li>
+    </ul>
+    <div id="tab-1">
+      <p>HBaby Dove Rich Moisture Tip-To-Toe Baby Wash (400ml):
+        • 100% skin-natural nutrients* help baby skin retain its natural moisture.
+        • Hypoallergenic formula that’s as gentle as water your new-born’s first bath
+        • Tear-free & pH neutral to baby skin
+        • Free from dyes, parabens, phthalates and sulphates.
+        • Made with prebiotic moisturizer to support baby skin’s natural health
+        • Mild fragrance specially developed for babies
+        • Paediatrician approved, safe for new-born.
+        • Made from 100% recyclable plastic
+        • Certified cruelty-free by PETA</p>
+      <p>
+        Baby Dove Rich Moisture Shampoo (400ml):
+        • 100% skin-natural nutrients* help your baby’s scalp retain natural moisture
+        • Tear-free & pH neutral to baby skin
+        • Formulated with ¼ moisturizing cream.
+        • Made with a hypoallergenic formula that’s as gentle as water your new-born’s first bath.
+        • Made with prebiotic moisturizer to support baby skin’s natural health
+        • Free from dyes, parabens, phthalates and sulphates.
+        • Caring baby shampoo infused with a delicate, comforting scent
+        • Paediatrician approved, safe for new-born.
+        • Made from 100% recyclable plastic
+        • Certified cruelty-free by PETA
+      </p>
     </div>
-
-    <button class="accordion">Section 2</button>
-    <div class="panel">
-      <p>Lorem ipsum...</p>
+    <div id="tab-2">
+      <img src= "https://assets.entrepreneur.com/content/3x2/2000/20161013103704-Logistics.jpeg" alt="pic" height="400px" width="900px"/>
     </div>
-
-    <button class="accordion">Section 3</button>
-    <div class="panel">
-      <p>Lorem ipsum...</p>
-    <div>
+    <div id="tab-3">
+      <p>Hello3</p>
+    </div>
   </div>
+ 
+
   
 
 {% if section.settings.related_products_enable %}
@@ -327,6 +311,11 @@
       margin: 2rem 0;
       padding: 0;
     }
+      ul.tabs2 {
+      display: none;
+      margin: 2rem 0;
+      padding: 0;
+    }
     ul.tabs li {
       float: left;
       height: 30px;
@@ -342,51 +331,21 @@
       width: auto;
       padding:5px 10px;
       color: #00377b;
-	  transition: color .2s;
+	  transition: color .1s;
     }
     ul.tabs li a.active {
       color: #c89b42;
       border-bottom: 1px solid #c89b42;
       position: relative;
     }
-   
-    .accordion {
-      background-color: #eee;
-      color: #444;
-      cursor: pointer;
-      padding: 18px;
-      width: 100%;
-      text-align: left;
-      border: none;
-      outline: none;
-      transition: 0.4s;
-    }
-
-
-    .active, .accordion:hover {
-      background-color: #ccc;
-    }
-
-    .panel {
-      padding: 0 18px;
-      background-color: white;
-      display: none;
-      overflow: hidden;
-    }
     
     @media screen and (max-width: 700px){
-    ul.tabs {
+        ul.tabs {
       display: none;
       margin: 2rem 0;
       padding: 0;
-        }
-      .accordion1{
-      	display: none;
-      }
-      .ccordion{;
-      	display:none
-      }
-      
+    }
+
     }
   </style>
   
@@ -396,7 +355,7 @@
     
       $(document).ready(function() {
     $('ul.tabs').each(function(){
-      let active, content, links = $(this).find('a');
+      var active, content, links = $(this).find('a');
       active = links.first().addClass('active');
       content = $(active.attr('href'));
       links.not(':first').each(function () {
@@ -413,21 +372,7 @@
       });
     });
   });
-    
-
-   let acc = document.getElementsByClassName("accordion");
-      for (let i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-          this.classList.toggle("active");
-
-          let panel = this.nextElementSibling;
-          if (panel.style.display === "block") {
-            panel.style.display = "none";
-          } else {
-            panel.style.display = "block";
-          }
-        });
-
+      
   </script>
   
   
