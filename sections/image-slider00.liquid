@@ -108,13 +108,13 @@
 
 
 <style>
-   .bannertabs {
+   ul.bannertabs {
       display: flex; 
       margin: 2rem 0;
       padding: 0;
     }
      
-    .bannertabs li {
+    ul.bannertabs li {
       margin: 0 2% 0 0;
       width: auto;
     }
@@ -204,9 +204,8 @@
 
 {% javascript %}
 
-
       $(document).ready(function() {
-    $('.bannertabs').each(function(){
+    $('ul.bannertabs').each(function(){
       var active, content, links = $(this).find('a');
       active = links.first().addClass('active');
       content = $(active.attr('href'));
