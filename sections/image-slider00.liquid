@@ -19,7 +19,7 @@
             PETA certified
             vegan & cruelty free
            </p>
-        <a href="" >Learn more</a>
+        <a href="content1" >Learn more</a>
     </div>
   </div>
     <div class="banneritem">
@@ -59,6 +59,7 @@
 </div>
 
 
+<div class="content1"><p>Hello</p></div>
 
 
 
@@ -174,22 +175,26 @@
 {% endstylesheet %}
 
 <script>
-
- var acc = document.getElementsByClassName("detail");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
+        $(document).ready(function() {
+    $('banneritem').each(function(){
+      var active, content, links = $(this).find('a');
+      active = links.first().addClass('active');
+      content = $(active.attr('href'));
+      links.not(':first').each(function () {
+        $($(this).attr('href')).hide();
+      });
+      $(this).find('a').click(function(e){
+        active.removeClass('active');
+        content.hide();
+        active = $(this);
+        content = $($(this).attr('href'));
+        active.addClass('active');
+        content.show();
+        return false;
+      });
+    });
   });
-}
-
+  
     $("#slideshow > div:gt(0)").hide();
 
     setInterval(function() { 
