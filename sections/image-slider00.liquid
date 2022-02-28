@@ -82,7 +82,7 @@
     </div>
   </div>
   
-  <div id="banner2" >
+  <div class="banner2" >
     <div class="banneritem">
      <img class="bannerimage" alt="picture"
        src="https://cdn.shopify.com/s/files/1/0562/2068/0362/files/300x300_peta-logoicon_180x.png?v=1630590184" />
@@ -169,7 +169,7 @@
    #banner{
      display: flex;
    }
-     #banner2{
+   .banner2{
   		display: none;
   	}
   
@@ -230,7 +230,7 @@
    	 #banner{
   		display: none;
   	}
-       #banner2{
+    .banner2{
   		display: grid;
   	}
       .otabs{
@@ -305,7 +305,7 @@
     });
   });
           $(document).ready(function() {
-    $('#banner2').each(function(){
+    $('.banner2').each(function(){
       var active, content, links = $(this).find('a');
       active = links.first().addClass('active');
       content = $(active.attr('href'));
