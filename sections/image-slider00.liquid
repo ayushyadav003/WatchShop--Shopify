@@ -10,7 +10,7 @@
 
 <div id="bannerContainer">
 	<div class="heading"><p>a little for you & for the planet</p></div>
-<div id="detailsLink" >
+<div id="banner" >
     <div class="banneritem">
      <img class="bannerimage" alt="picture"
        src="https://cdn.shopify.com/s/files/1/0562/2068/0362/files/300x300_peta-logoicon_180x.png?v=1630590184" />
@@ -74,7 +74,7 @@
 </div>
    
 
-
+<!-- 
  <div class="accordion">
     <div class="tabs">
       <div>
@@ -103,7 +103,7 @@
     </div>
  
   </div>
-
+ -->
 <style>
  
   .heading{
@@ -235,7 +235,7 @@
 <script>
 
         $(document).ready(function() {
-    $('.banner').each(function(){
+    $('#banner').each(function(){
       var active, content, links = $(this).find('a');
       active = links.first().addClass('active');
       content = $(active.attr('href'));
