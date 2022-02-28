@@ -102,7 +102,7 @@
       </p>
     </div>
       
-  </div>
+<!--   </div>
     <div class="banneritem">
      <img class="bannerimage" alt="picture"
       src="https://cdn.shopify.com/s/files/1/0562/2068/0362/files/300x300_paraben_180x.png?v=1630590208" />
@@ -154,7 +154,7 @@
 </div>
 </div>
    
-
+ -->
 
 
 <style>
@@ -250,18 +250,10 @@
         width: 300px;
         margin: 0 auto 2rem auto;
     }
-   #bannerContainer{
-     display: none;
-  }
+
         #bannerContainer2{
      display: grid;
   }
-     
-
-  
-   #banner{
-     display: grid;
-   	}
    }
 </style>
 
@@ -323,30 +315,7 @@
       });
     });
   });
-  
-    if ( $(window).width() < 800 ) {
-
-   
-  $(document).ready(function() {
-    $('#banner2').each(function(){
-      var active, content, links = $(this).find('a');
-      active = links.first().addClass('active');
-      content = $(active.attr('href'));
-      links.each(function () {
-        $($(this).attr('href')).hide();
-      });
-      $(this).find('a').click(function(e){
-        active.removeClass('active');
-        content.hide();
-        active = $(this);
-        content = $($(this).attr('href'));
-        active.addClass('active');
-        content.show();
-        return false;
-      });
-    });
-  });
-    }
+ 
       
   
     $("#slideshow > div:gt(0)").hide();
