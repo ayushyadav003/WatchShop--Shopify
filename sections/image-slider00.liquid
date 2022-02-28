@@ -303,7 +303,6 @@
 
 <script>
 
-  if ( $(window).width() > 800 ) {
   
         $(document).ready(function() {
     $('#banner').each(function(){
@@ -324,7 +323,9 @@
       });
     });
   });
-  }
+  
+    if ( $(window).width() < 800 ) {
+
    
   $(document).ready(function() {
     $('#banner2').each(function(){
@@ -345,6 +346,7 @@
       });
     });
   });
+    }
       
   
     $("#slideshow > div:gt(0)").hide();
