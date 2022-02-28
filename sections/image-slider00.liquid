@@ -58,13 +58,13 @@
 </div>
 
 <div>
-  <div class="detail">
+  <div id="detail1">
     <p>hello</p>
   </div>
-   <div class="detail">
+   <div id="detail2">
     <p>hello</p>
   </div>
-   <div class="detail">
+   <div id="detail3">
     <p>hello</p>
   </div>
 </div>
@@ -183,21 +183,6 @@
 {% endstylesheet %}
 
 <script>
-
- var acc = document.getElementsByClassName("banneritem");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
 
     $("#slideshow > div:gt(0)").hide();
 
