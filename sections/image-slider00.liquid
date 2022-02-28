@@ -58,13 +58,13 @@
 </div>
 
 <div>
-  <div id="">
+  <div class="detail">
     <p>hello</p>
   </div>
-   <div>
+   <div class="detail">
     <p>hello</p>
   </div>
-   <div>
+   <div class="detail">
     <p>hello</p>
   </div>
 </div>
@@ -184,25 +184,24 @@
 
 <script>
 
-      $(document).ready(function() {
-    $('ul.bannertabs').each(function(){
-      var active, content, links = $(this).find('a');
-      active = links.first().addClass('active');
-      content = $(active.attr('href'));
-      links.not(':first').each(function () {
-        $($(this).attr('href')).hide();
-      });
-      $(this).find('a').click(function(e){
-        active.removeClass('active');
-        content.hide();
-        active = $(this);
-        content = $($(this).attr('href'));
-        active.addClass('active');
-        content.show();
-        return false;
-      });
-    });
+ var acc = document.getElementsByClassName("banneritem");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
   });
+}
 
     $("#slideshow > div:gt(0)").hide();
 
