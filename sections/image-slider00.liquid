@@ -48,7 +48,7 @@
 	<img class="bannerimage" alt="picture"
      src="https://cdn.shopify.com/s/files/1/0562/2068/0362/files/300x300_recyclebottles_180x.png?v=1630590265" />
     <div>
-    	<p>
+    	<p class="detail">
           100% recycled & recyclable bottles
    		 </p>
       <a href="" >Learn more</a>
@@ -57,17 +57,7 @@
 </div>
 </div>
 
-<div>
-  <div class="detail">
-    <p>hello</p>
-  </div>
-   <div class="detail">
-    <p>hello</p>
-  </div>
-   <div class="detail">
-    <p>hello</p>
-  </div>
-</div>
+
 
 
 
@@ -184,13 +174,13 @@
 
 <script>
 
- var acc = document.getElementsByClassName("banneritem");
+ var acc = document.getElementsByClassName("detail");
 var i;
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
     this.classList.toggle("active");
-    var panel = document.getElementsByClassName("detail");
+    var panel = this.nextElementSibling;
     if (panel.style.display === "block") {
       panel.style.display = "none";
     } else {
