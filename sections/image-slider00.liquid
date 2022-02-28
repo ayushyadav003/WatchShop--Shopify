@@ -10,57 +10,55 @@
 
 <div id="bannerContainer">
 	<div class="heading"><p>a little for you & for the planet</p></div>
-<ul id="banner" >
-    <li class="banneritem">
+<div id="banner" >
+    <div class="banneritem">
      <img class="bannerimage" alt="picture"
        src="https://cdn.shopify.com/s/files/1/0562/2068/0362/files/300x300_peta-logoicon_180x.png?v=1630590184" />
-   
+      <div>
           <p>
             PETA certified
             vegan & cruelty free
            </p>
-        <a href="#content1" >Learn more</a>
- 
-  </li>
-    <li class="banneritem">
+        <a href="" >Learn more</a>
+    </div>
+  </div>
+    <div class="banneritem">
      <img class="bannerimage" alt="picture"
       src="https://cdn.shopify.com/s/files/1/0562/2068/0362/files/300x300_paraben_180x.png?v=1630590208" />
-    
+      <div>
           <p>
            no dyes &
 			parabens
            </p>
-        <a href="#content2" >Learn more</a>
-     
-  </li>
-  <li class="banneritem">
+        <a href="" >Learn more</a>
+      </div>
+  </div>
+  <div class="banneritem">
       <img class="bannerimage" alt="picture"
 		src="https://cdn.shopify.com/s/files/1/0562/2068/0362/files/300x300_silicones_180x.png?v=1630590238" />
-      
+      <div>
           <p>
         	plant based
 			cleansers
            </p>
         <a href="" >Learn more</a>
-      
-  </li>
-  <li class="banneritem">
+      </div>
+  </div>
+  <div class="banneritem">
 	<img class="bannerimage" alt="picture"
      src="https://cdn.shopify.com/s/files/1/0562/2068/0362/files/300x300_recyclebottles_180x.png?v=1630590265" />
-  
+    <div>
     	<p class="detail">
           100% recycled & recyclable bottles
    		 </p>
-
+      <p>Hello</p>
       <a href="" >Learn more</a>
-
-  </li>
-</ul>
+    </div>
+  </div>
+</div>
 </div>
 
 
-<div id="content1"><p>Hello</p>
-</div><div id="content2"><p>Hello2222</p></div>
 
 
 
@@ -85,12 +83,12 @@
   	display: flex;
   }
 
-  .banneritem p{
+  .banneritem div{
     color: #808080;
     margin: 2rem 0rem 0 2rem;
     font-family: Arial, Helvetica, sans-serif;
   }
-  .banneritem a{
+  .banneritem div a{
     color: #db9999 ;
     font-size: 13px;
     border-bottom: 1px solid #db9999;
@@ -177,7 +175,7 @@
 
 <script>
         $(document).ready(function() {
-    $('banneritem').each(function(){
+    $('ul.tabs').each(function(){
       var active, content, links = $(this).find('a');
       active = links.first().addClass('active');
       content = $(active.attr('href'));
