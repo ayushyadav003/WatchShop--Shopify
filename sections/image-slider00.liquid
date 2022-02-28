@@ -223,7 +223,7 @@
             margin-left: calc(-728px * 3);
         }
     }
-    @media screen and (max-width: 700px){
+    @media screen and (max-width: 800px){
    	 #banner{
   		display: none;
   	}
@@ -277,12 +277,31 @@
 
 {% endschema %}
 
-{% stylesheet %}
-{% endstylesheet %}
+<script>
+	>
+        $(document).ready(function() {
+    $('#banner2').each(function(){
+      var active, content, links = $(this).find('a');
+      active = links.first().addClass('active');
+      content = $(active.attr('href'));
+      links.each(function () {
+        $($(this).attr('href')).hide();
+      });
+      $(this).find('a').click(function(e){
+        active.removeClass('active');
+        content.hide();
+        active = $(this);
+        content = $($(this).attr('href'));
+        active.addClass('active');
+        content.show();
+        return false;
+      });
+    });
+  });
+ 
+</script>
 
 <script>
-
-  
         $(document).ready(function() {
     $('#banner').each(function(){
       var active, content, links = $(this).find('a');
