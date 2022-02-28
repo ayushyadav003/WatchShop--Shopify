@@ -60,7 +60,24 @@
 </div>
 
 
-
+ <div class="accordion">
+    <ul class="tabs">
+      <li><a href="#ctab-1">Description</a></li>
+      <li><a href="#ctab-2">Shipping</a></li>
+      <li><a href="#ctab-3">Returns</a></li>
+    </ul>
+    <div id="ctab-1">
+      <p>
+		hello
+      </p>
+    </div>
+    <div id="ctab-2">
+      <p>hi</p>
+    </div>
+    <div id="ctab-3">
+      <p>Hello3</p>
+    </div>
+  </div>
 
 <style>
  
@@ -192,6 +209,26 @@
 
 <script>
 
+        $(document).ready(function() {
+    $('ul.tabs').each(function(){
+      var active, content, links = $(this).find('a');
+      active = links.first().addClass('active');
+      content = $(active.attr('href'));
+      links.not(':first').each(function () {
+        $($(this).attr('href')).hide();
+      });
+      $(this).find('a').click(function(e){
+        active.removeClass('active');
+        content.hide();
+        active = $(this);
+        content = $($(this).attr('href'));
+        active.addClass('active');
+        content.show();
+        return false;
+      });
+    });
+  });
+      
   
     $("#slideshow > div:gt(0)").hide();
 
