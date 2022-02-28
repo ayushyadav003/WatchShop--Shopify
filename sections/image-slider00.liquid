@@ -239,7 +239,7 @@
       var active, content, links = $(this).find('a');
       active = links.first().addClass('active');
       content = $(active.attr('href'));
-      links.each(function () {
+      links.not(':first').each(function () {
         $($(this).attr('href')).hide();
       });
       $(this).find('a').click(function(e){
