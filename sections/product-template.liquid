@@ -217,7 +217,7 @@
  
 <!--  Deskstop/tablet Accordion -->
   <div class="accordion">
-    <ul class="tabs">
+    <ul class="tabs2">
       <li><a href="#tab-1">Description</a></li>
       <li><a href="#tab-2">Shipping</a></li>
       <li><a href="#tab-3">Returns</a></li>
@@ -363,11 +363,11 @@
       .accordion{
       	display: none;
       }
-      ul.tabs{
+      ul.tabs2{
       display: grid;
       }
    
-    ul.tabs li a { 
+    ul.tabs2 li a { 
       font-size: 30px;
       line-height: 30px;      
       font-weight:bold;
@@ -377,7 +377,7 @@
       color: #00377b;
 	  transition: color .1s;
     }
-    ul.tabs li a.active {
+    ul.tabs2 li a.active {
       color: #c89b42;
       border-bottom: 1px solid #c89b42;
       position: relative;
@@ -391,9 +391,30 @@
   </style>
   
   <script>
-    
+     if ( $(window).width() > 700 ){
       $(document).ready(function() {
     $('ul.tabs').each(function(){
+      var active, content, links = $(this).find('a');
+      active = links.first().addClass('active');
+      content = $(active.attr('href'));
+      links.not(':first').each(function () {
+        $($(this).attr('href')).hide();
+      });
+      $(this).find('a').click(function(e){
+        active.removeClass('active');
+        content.hide();
+        active = $(this);
+        content = $($(this).attr('href'));
+        active.addClass('active');
+        content.show();
+        return false;
+      });
+    });
+  });
+     }
+    
+     $(document).ready(function() {
+    $('ul.tabs2').each(function(){
       var active, content, links = $(this).find('a');
       active = links.first().addClass('active');
       content = $(active.attr('href'));
