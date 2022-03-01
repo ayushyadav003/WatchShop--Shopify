@@ -358,27 +358,28 @@
       .accordion{
       	display: none;
       }
-      ul.tabs {
-      display: ;
-      margin: 2rem 0;
-      padding: 0;
-    	}
      ul.tabs li {
-        float: left;
-        height: 2px;
-        margin: 0 8% 0 0;
-        width: auto;
-      }
-      ul.tabs li a {
-        font-size: 15px;
-        line-height: 15px;      
-        font-weight:bold;
-        font-family: 'Gotham', sans-serif;
-        width: auto;
-        padding:5px 10px;
-        color: #00377b;
-        transition: color .1s;
-      }
+       display: grid;
+      float: left;
+      height: 30px;
+      margin: 0 20% 0 0;
+      width: auto;
+    }
+    ul.tabs li a {
+      font-size: 30px;
+      line-height: 30px;      
+      font-weight:bold;
+      font-family: 'Gotham', sans-serif;
+      width: auto;
+      padding:5px 10px;
+      color: #00377b;
+	  transition: color .1s;
+    }
+    ul.tabs li a.active {
+      color: #c89b42;
+      border-bottom: 1px solid #c89b42;
+      position: relative;
+    }
     }
   </style>
   
