@@ -285,6 +285,7 @@
 
 
 <script>
+  if ( $(window).width() > 800 ){
         $(document).ready(function() {
     $('#banner').each(function(){
       var active, content, links = $(this).find('a');
@@ -304,6 +305,7 @@
       });
     });
   });
+  }
           $(document).ready(function() {
     $('.banner2').each(function(){
       var active, content, links = $(this).find('a');
